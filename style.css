@@ -1,0 +1,103 @@
+:root {
+  --bg-color: #000000;
+  --primary: #14213d;
+  --accent: #fca311;
+  --gray: #e5e5e5;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  background-color: var(--primary);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  color: var(--white);
+}
+
+    :root {
+      /* Colores principales */
+      --color-primary: #EC5C2C;
+      --color-primary-dark: #c5481f;
+      --color-secondary: #29285A;
+      --color-accent: #F18C6B;
+
+      /* Grises y fondo */
+      --color-background: #f9f9f9;
+      --color-surface: #ffffff;
+      --color-border: #e0e0e0;
+
+      /* Tipografía */
+      --color-text: #333333;
+      --color-muted: #777777;
+
+      /* Estados */
+      --color-success: #2ecc71;
+      --color-error: #e74c3c;
+      --color-warning: #f1c40f;
+      --color-info: #3498db;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-text);
+      margin: 0;
+      padding: 2rem;
+    }
+
+    header {
+      background-color: var(--color-primary);
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    section {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .button {
+      background-color: var(--color-secondary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: var(--color-primary-dark);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+    }
+
+    .tag.success { background-color: var(--color-success); color: white; }
+    .tag.error { background-color: var(--color-error); color: white; }
+    .tag.warning { background-color: var(--color-warning); color: black; }
+    .tag.info { background-color: var(--color-info); color: white; }

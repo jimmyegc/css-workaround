@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="nmda">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NMDA + DaisyUI</title>
+
+    <!-- Tailwind CSS + DaisyUI vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Activar el plugin de DaisyUI en modo CDN
+      tailwind.config = {
+        plugins: [daisyui],
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@4.10.2"></script>
+
+    <!-- Tema personalizado NMDA usando variables CSS -->
+    <style>
+      html[data-theme="nmda"] {
+        /* DaisyUI utiliza estas variables para definir colores */
+        --p: #ec5c2c; /* primary */
+        --pf: #ffffff;
+
+        --s: #29285a; /* secondary */
+        --sf: #ffffff;
+
+        --a: #f18c6b; /* accent */
+        --af: #ffffff;
+
+        --n: #f9f9f9; /* neutral */
+        --nf: #29285a;
+
+        --b1: #ffffff; /* base-100 */
+        --bc: #e5e7eb;
+
+        --in: #3abff8;
+        --su: #36d399;
+        --wa: #fbbd23;
+        --er: #f87272;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-base-100 text-base-content p-6">
+    <div class="max-w-xl mx-auto space-y-6">
+      <h1 class="text-4xl font-bold text-primary">Bienvenido a NMDA</h1>
+
+      <p class="text-secondary">
+        Estás viendo una interfaz con un tema personalizado usando DaisyUI.
+      </p>
+
+      <button class="btn btn-primary w-full">Botón Primario</button>
+
+      <div class="card bg-neutral text-neutral-content shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title">Componente DaisyUI</h2>
+          <p>Esta tarjeta está estilizada con la paleta personalizada de NMDA.</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-accent">Acción</button>
+          </div>
+        </div>
+      </div>
+
+      <button
+        onclick="document.documentElement.setAttribute('data-theme', 'nmda')"
+        class="btn btn-outline btn-info w-full"
+      >
+        Aplicar Tema NMDA
+      </button>
+    </div>
+  </body>
+</html>

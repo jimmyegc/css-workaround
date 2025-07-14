@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tarjeta de Perfil Brutalista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Mono', monospace;
+      background: #fefefe;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .profile-card {
+      border: 2px solid black;
+      padding: 2rem;
+      max-width: 320px;
+      text-align: center;
+      background: white;
+    }
+
+    .profile-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 2px solid black;
+      margin-bottom: 1rem;
+    }
+
+    .profile-card h2 {
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .profile-card p.role {
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+
+    .profile-card p.desc {
+      font-size: 0.9rem;
+      margin: 1rem 0;
+    }
+
+    .profile-card button {
+      border: 2px solid black;
+      background: none;
+      padding: 0.5rem 1.5rem;
+      cursor: pointer;
+      font-family: 'Space Mono', monospace;
+      transition: all 0.2s ease;
+    }
+
+    .profile-card button:hover {
+      background: black;
+      color: white;
+    }
+
+    @media (max-width: 500px) {
+      .profile-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img src="https://placehold.co/100x100" alt="Foto de perfil" />
+    <h2>Jimmy García</h2>
+    <p class="role">Full Stack Developer</p>
+    <p class="desc">Apasionado del diseño brutalista, software a medida y experiencias funcionales.</p>
+    <button>Contactar</button>
+  </div>
+</body>
+</html>

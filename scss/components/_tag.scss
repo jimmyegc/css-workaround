@@ -1,0 +1,32 @@
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  margin-right: 0.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.tag.success {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.tag.error {
+  background-color: var(--color-error);
+  color: white;
+}
+
+.tag.warning {
+  background-color: var(--color-warning);
+  color: black;
+}
+
+.tag.info {
+  background-color: var(--color-info);
+  color: white;
+}

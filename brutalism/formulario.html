@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulario Brutalista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #000;
+      --white: #fff;
+      --danger: #ff3b3b;
+      --success: #00cc66;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Mono', monospace;
+      background: var(--white);
+      color: var(--black);
+      padding: 2rem;
+    }
+
+    form {
+      border: 2px solid var(--black);
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+      background: var(--white);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      border: 2px solid var(--black);
+      padding: 0.75rem;
+      font-family: inherit;
+      font-size: 1rem;
+      background: transparent;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: center;
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .error {
+      color: var(--danger);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    button[type="submit"] {
+      border: 2px solid var(--black);
+      background: none;
+      padding: 0.75rem 1.5rem;
+      font-family: inherit;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    @media (max-width: 500px) {
+      form {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form onsubmit="return validateForm(event)">
+    <h2>Formulario Brutalista</h2>
+
+    <div class="form-group">
+      <label for="name">Nombre completo</label>
+      <input type="text" id="name" />
+      <div class="error" id="error-name"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" />
+      <div class="error" id="error-email"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Mensaje</label>
+      <textarea id="message" rows="5"></textarea>
+    </div>
+
+    <div class="form-check">
+      <input type="checkbox" id="terms" />
+      <label for="terms">Acepto los términos y condiciones</label>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    function validateForm(event) {
+      event.preventDefault();
+      let valid = true;
+
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const errorName = document.getElementById('error-name');
+      const errorEmail = document.getElementById('error-email');
+
+      errorName.textContent = '';
+      errorEmail.textContent = '';
+
+      if (name.value.trim() === '') {
+        errorName.textContent = 'El nombre es requerido.';
+        valid = false;
+      }
+
+      if (!email.value.includes('@')) {
+        errorEmail.textContent = 'Correo inválido.';
+        valid = false;
+      }
+
+      if (valid) {
+        alert('Formulario enviado con éxito.');
+        event.target.submit();
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+button {
+  font-family: $font-stack;
+  border: 2px solid $text-color;
+  background: transparent;
+  color: $text-color;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: $primary-color;
+    color: #fff;
+  }
+}
+
+.card {
+  border: 2px solid $border-color;
+  padding: $spacing-unit;
+  margin-bottom: $spacing-unit;
+  background: #fff;
+}
+
+.form-group {
+  margin-bottom: $spacing-unit;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid $border-color;
+    background: none;
+    font-family: $font-stack;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: $spacing-unit;
+
+  th,
+  td {
+    border: 2px solid $border-color;
+    padding: 0.5rem;
+    text-align: left;
+  }
+
+  th {
+    background: $secondary-color;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal-content {
+    background: $bg-color;
+    padding: $spacing-unit * 2;
+    border: 2px solid $border-color;
+    max-width: 500px;
+    width: 90%;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-unit * 2;
+  border: 2px solid $border-color;
+  margin-bottom: $spacing-unit * 2;
+  background: #fff;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 600px;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: $spacing-unit;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: $spacing-unit;
+    }
+  }
+
+  .hero-cta {
+    button {
+      font-size: 1rem;
+    }
+  }
+
+  .hero-image {
+    max-width: 300px;
+    margin-left: $spacing-unit * 2;
+
+    @media (max-width: $breakpoint-md) {
+      margin-left: 0;
+      margin-top: $spacing-unit;
+    }
+
+    img {
+      width: 100%;
+      border: 2px solid $border-color;
+    }
+  }
+}

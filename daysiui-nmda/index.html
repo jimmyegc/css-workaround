@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="nmda">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NMDA + DaisyUI</title>
+
+    <!-- Tailwind + DaisyUI CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+        plugins: [window.daisyui],
+        daisyui: {
+          themes: [
+            {
+              nmda: {
+                "primary": "#EC5C2C",
+                "secondary": "#29285A",
+                "accent": "#F18C6B",
+                "neutral": "#f9f9f9",
+                "base-100": "#ffffff",
+                "info": "#3ABFF8",
+                "success": "#36D399",
+                "warning": "#FBBD23",
+                "error": "#F87272"
+              }
+            }
+          ]
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.js"></script>
+  </head>
+  <body class="min-h-screen bg-base-100 p-8">
+
+    <div class="max-w-md mx-auto space-y-4">
+      <h1 class="text-3xl font-bold text-primary">Bienvenido a NMDA</h1>
+
+      <p class="text-secondary">
+        Esta interfaz usa un tema personalizado basado en tu identidad visual.
+      </p>
+
+      <button class="btn btn-primary w-full">Botón Primario</button>
+
+      <div class="card bg-neutral text-neutral-content shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title">Componente DaisyUI</h2>
+          <p>Este componente usa la paleta de colores personalizada de NMDA.</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-accent">Acción</button>
+          </div>
+        </div>
+      </div>
+
+      <button
+        onclick="document.documentElement.setAttribute('data-theme', 'nmda')"
+        class="btn btn-outline btn-info w-full"
+      >
+        Aplicar Tema NMDA
+      </button>
+    </div>
+
+  </body>
+</html>

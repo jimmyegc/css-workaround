@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="nmda">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NMDA + DaisyUI</title>
+
+    <!-- Tailwind + DaisyUI CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Solo activamos DaisyUI, sin configuración adicional
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@latest"></script>
+
+    <style>
+      /* Tema personalizado NMDA usando CSS variables de DaisyUI */
+      html[data-theme="nmda"] {
+        --p: #ec5c2c;
+        --pf: #fff;
+
+        --s: #29285a;
+        --sf: #fff;
+
+        --a: #f18c6b;
+        --af: #fff;
+
+        --n: #f9f9f9;
+        --nf: #000;
+
+        --b1: #ffffff;
+        --bc: #e5e7eb;
+
+        --in: #3abff8;
+        --su: #36d399;
+        --wa: #fbbd23;
+        --er: #f87272;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-base-100 p-8">
+    <div class="max-w-md mx-auto space-y-4">
+      <h1 class="text-3xl font-bold text-primary">Bienvenido a NMDA</h1>
+
+      <p class="text-secondary">
+        Esta interfaz usa un tema personalizado basado en tu identidad visual.
+      </p>
+
+      <button class="btn btn-primary w-full">Botón Primario</button>
+
+      <div class="card bg-neutral text-neutral-content shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title">Componente DaisyUI</h2>
+          <p>Este componente usa la paleta de colores personalizada de NMDA.</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-accent">Acción</button>
+          </div>
+        </div>
+      </div>
+
+      <button
+        onclick="document.documentElement.setAttribute('data-theme', 'nmda')"
+        class="btn btn-outline btn-info w-full"
+      >
+        Aplicar Tema NMDA
+      </button>
+    </div>
+  </body>
+</html>

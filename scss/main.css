@@ -1,0 +1,206 @@
+@charset "UTF-8";
+:root {
+  --color-primary: #EC5C2C;
+  --color-primary-dark: #c5481f;
+  --color-secondary: #29285A;
+  --color-accent: #F18C6B;
+  --color-background: #f9f9f9;
+  --color-surface: #ffffff;
+  --color-border: #e0e0e0;
+  --color-text: #333333;
+  --color-muted: #777777;
+  --color-success: #2ecc71;
+  --color-error: #e74c3c;
+  --color-warning: #f1c40f;
+  --color-info: #3498db;
+  --font-base: "Segoe UI", sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: var(--line-height-base);
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.button--primary:hover {
+  background-color: var(--color-primary-dark);
+}
+.button--secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+.button--danger {
+  background-color: var(--color-error);
+  color: #fff;
+}
+.button--disabled {
+  background-color: var(--color-border);
+  color: var(--color-muted);
+  cursor: not-allowed;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.alert.success {
+  background-color: var(--color-success);
+  color: #fff;
+}
+.alert.error {
+  background-color: var(--color-error);
+  color: #fff;
+}
+.alert.warning {
+  background-color: var(--color-warning);
+  color: #000;
+}
+.alert.info {
+  background-color: var(--color-info);
+  color: #fff;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+input.error,
+select.error,
+textarea.error {
+  border-color: var(--color-error);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+thead {
+  background-color: var(--color-surface);
+  border-bottom: 2px solid var(--color-border);
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+tbody tr:hover {
+  background-color: var(--color-background);
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  margin-right: 0.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.tag.success {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.tag.error {
+  background-color: var(--color-error);
+  color: white;
+}
+
+.tag.warning {
+  background-color: var(--color-warning);
+  color: black;
+}
+
+.tag.info {
+  background-color: var(--color-info);
+  color: white;
+}
+
+body.dark {
+  --color-background: #1e1e1e;
+  --color-surface: #2c2c2c;
+  --color-text: #f0f0f0;
+  --color-muted: #999;
+  --color-border: #444;
+  --color-primary: #ff7849;
+  --color-primary-dark: #d95f36;
+}/*# sourceMappingURL=main.css.map */

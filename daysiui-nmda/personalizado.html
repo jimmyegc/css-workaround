@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>DaisyUI + Tailwind 4 CDN con colores personalizados</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Google Fonts Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+
+    :root {
+      --color-primary: #ec5c2c;
+      --color-primary-focus: #ffffff;  
+      --color-secondary: #29285a;
+      --color-secondary-focus: #ffffff;   
+      --color-accent: #f18c6b;
+      --color-accent-focus: #ffffff;
+      --color-neutral: #f9f9f9;
+      --color-neutral-focus: #29285a;
+      --color-base-100: #ffffff;
+      --color-border-color: #e5e7eb;      
+      --color-info: #3abff8;
+      --color-success: #36d399;
+      --color-warning: #fbbd23;
+      --color-error: #f87272;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+  </style>
+</head>
+ <body class="bg-base-100 text-base-content p-8 space-y-10">
+    <h1 class="text-5xl font-bold text-primary">NMDA Kitchen Sink</h1>
+
+    <!-- Buttons -->
+    <div class="space-x-2">
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-accent">Accent</button>
+      <button class="btn btn-info">Info</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-warning">Warning</button>
+      <button class="btn btn-error">Error</button>
+    </div>
+
+    <!-- Card -->
+    <div class="card w-96 bg-neutral shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Tarjeta NMDA</h2>
+        <p>Ejemplo de tarjeta con fondo neutral y botones personalizados.</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-accent">Aceptar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-md">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl text-primary">nmda</a>
+      </div>
+      <div class="flex-none space-x-2">
+        <button class="btn btn-ghost">Inicio</button>
+        <button class="btn btn-ghost">Servicios</button>
+        <button class="btn btn-primary">Contacto</button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <button class="btn btn-secondary" onclick="modal.showModal()">Abrir Modal</button>
+    <dialog id="modal" class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Hola desde NMDA</h3>
+        <p class="py-4">Este es un ejemplo de modal usando DaisyUI.</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn">Cerrar</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Alert -->
+    <div class="alert alert-success shadow-lg">
+      <span>¡Éxito! Todo está funcionando correctamente.</span>
+    </div>
+
+    <!-- Form -->
+    <div class="form-control w-full max-w-sm">
+      <label class="label">
+        <span class="label-text text-secondary">Nombre</span>
+      </label>
+      <input type="text" placeholder="Escribe tu nombre" class="input input-bordered w-full" />
+    </div>
+
+    <!-- Badge + Avatar -->
+    <div class="flex items-center space-x-4">
+      <div class="avatar">
+        <div class="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <img src="https://i.pravatar.cc/100" alt="avatar" />
+        </div>
+      </div>
+      <span class="badge badge-primary">Nuevo</span>
+      <span class="badge badge-secondary">Miembro</span>
+    </div>
+  </body>
+</html>

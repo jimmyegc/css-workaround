@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Landing Page Brutalista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #000;
+      --white: #fff;
+      --primary: #ec5c2c;
+      --secondary: #29285a;
+      --spacing: 1rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Space Mono', monospace;
+      background: var(--white);
+      color: var(--black);
+      padding: var(--spacing);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: var(--spacing);
+      border: 2px solid var(--black);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: var(--spacing);
+    }
+
+    header p {
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing);
+    }
+
+    header button {
+      border: 2px solid var(--black);
+      background: none;
+      padding: 0.75rem 2rem;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    header button:hover,
+    header button:focus {
+      background: var(--primary);
+      color: var(--white);
+      outline: none;
+    }
+
+    .benefits {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      flex: 1;
+      border: 2px solid var(--black);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .card .icon {
+      font-size: 3rem;
+      margin-bottom: var(--spacing);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing);
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    form {
+      border: 2px solid var(--black);
+      padding: 1.5rem;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      border: 2px solid var(--black);
+      padding: 0.75rem;
+      font-family: inherit;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      background: transparent;
+      resize: vertical;
+    }
+
+    form button {
+      border: 2px solid var(--black);
+      background: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    form button:hover,
+    form button:focus {
+      background: var(--primary);
+      color: var(--white);
+      outline: none;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--secondary);
+      border-top: 2px solid var(--black);
+      padding-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .benefits {
+        flex-direction: column;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Diseño Brutalista para Webs 2025</h1>
+      <p>Fuerte, honesto y funcional. Perfecto para desarrolladores que quieren destacar.</p>
+      <button>Explorar UI</button>
+    </header>
+
+    <section class="benefits">
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Rendimiento</h3>
+        <p>Diseño minimalista que carga rápido y sin distracciones.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>Estilo Único</h3>
+        <p>Visuales crudos, directos, sin artificios ni sombras.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🛠️</div>
+        <h3>Fácil de usar</h3>
+        <p>Componentes reutilizables para desarrollo rápido.</p>
+      </div>
+    </section>
+
+    <form>
+      <label for="name">Nombre completo</label>
+      <input id="name" type="text" placeholder="Tu nombre" />
+
+      <label for="email">Correo electrónico</label>
+      <input id="email" type="email" placeholder="tu@correo.com" />
+
+      <label for="message">Mensaje</label>
+      <textarea id="message" rows="5" placeholder="Escribe tu mensaje aquí"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <footer>
+      &copy; 2025 - Diseño Brutalista NMDA
+    </footer>
+  </div>
+</body>
+</html>

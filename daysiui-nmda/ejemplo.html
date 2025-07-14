@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="nmda">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NMDA + DaisyUI</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- DaisyUI desde CDN (NO necesita configuración adicional) -->
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.js"></script>
+
+    <!-- Tema personalizado nmda usando CSS variables -->
+    <style>
+      html[data-theme='nmda'] {
+        /* Colores principales */
+        --p: #ec5c2c;
+        --pf: #ffffff;
+
+        --s: #29285a;
+        --sf: #ffffff;
+
+        --a: #f18c6b;
+        --af: #ffffff;
+
+        --n: #f9f9f9;
+        --nf: #29285a;
+
+        --b1: #ffffff;
+        --bc: #e5e7eb;
+
+        --in: #3abff8;
+        --su: #36d399;
+        --wa: #fbbd23;
+        --er: #f87272;
+
+        color-scheme: light;
+      }
+    </style>
+  </head>
+
+  <body class="bg-base-100 min-h-screen text-base-content p-6">
+    <div class="max-w-md mx-auto space-y-6">
+      <h1 class="text-4xl font-bold text-primary">Bienvenido a NMDA</h1>
+
+      <p class="text-secondary">
+        Este es un ejemplo funcional usando tu paleta personalizada con DaisyUI y Tailwind vía CDN.
+      </p>
+
+      <button class="btn btn-primary w-full">Botón Primario</button>
+
+      <div class="card bg-neutral text-neutral-content shadow-lg">
+        <div class="card-body">
+          <h2 class="card-title">Componente Tarjeta</h2>
+          <p>Este componente usa tu paleta de colores personalizada.</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-accent">Acción</button>
+          </div>
+        </div>
+      </div>
+
+      <button
+        onclick="document.documentElement.setAttribute('data-theme', 'nmda')"
+        class="btn btn-outline btn-info w-full"
+      >
+        Reaplicar Tema NMDA
+      </button>
+    </div>
+  </body>
+</html>

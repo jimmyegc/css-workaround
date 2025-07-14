@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Heroicons Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Mono', monospace;
+      margin: 0;
+      padding: 2rem;
+      background: #fefefe;
+      color: #000;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .search {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .search input {
+      border: 2px solid black;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1rem;
+    }
+
+    .icon-card {
+      border: 2px solid black;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Clon de Heroicons</h1>
+  </header>
+
+  <div class="search">
+    <input type="text" placeholder="Buscar íconos..." />
+  </div>
+
+  <div class="grid">
+    <div class="icon-card">🔥</div>
+    <div class="icon-card">🎧</div>
+    <div class="icon-card">📦</div>
+    <div class="icon-card">🚀</div>
+    <div class="icon-card">🔒</div>
+    <div class="icon-card">👨‍💻</div>
+    <div class="icon-card">🧠</div>
+    <div class="icon-card">💾</div>
+  </div>
+</body>
+</html>

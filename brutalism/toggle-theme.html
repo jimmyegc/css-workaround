@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Toggle modo claro/oscuro brutalista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #fff;
+      --color-text: #000;
+      --color-primary: #ec5c2c;
+      --color-border: #000;
+      --spacing: 1rem;
+      --font-family: 'Space Mono', monospace;
+      --border-width: 2px;
+    }
+
+    /* Variables para modo oscuro */
+    .dark {
+      --color-bg: #121212;
+      --color-text: #eee;
+      --color-primary: #ff6f61;
+      --color-border: #eee;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-family);
+      padding: var(--spacing);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    button {
+      border: var(--border-width) solid var(--color-border);
+      background: none;
+      color: var(--color-text);
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: background 0.2s ease, color 0.2s ease;
+      margin-bottom: var(--spacing);
+    }
+
+    button:hover,
+    button:focus {
+      background: var(--color-border);
+      color: var(--color-bg);
+      outline: none;
+    }
+
+  </style>
+</head>
+<body>
+  <button id="toggleTheme">Cambiar modo</button>
+
+  <h1>Tema Brutalista con Toggle Manual</h1>
+  <p>Este ejemplo muestra cómo cambiar entre modo claro y oscuro con CSS variables.</p>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleTheme');
+    const body = document.body;
+
+    // Detectar modo inicial por preferencia del sistema
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      body.classList.add('dark');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>

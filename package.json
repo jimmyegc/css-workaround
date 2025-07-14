@@ -1,0 +1,12 @@
+{
+  "name": "css-workaround",
+  "version": "1.0.0",
+  "description": "📌 Recomendaciones al nombrar variables de colores:\r Nombre de variable\tUso sugerido\r --color-primary\tColor principal (marca o énfasis)\r --color-secondary\tColor secundario (fondo alternativo)\r --color-background\tFondo general de la app\r --color-surface\tFondo de tarjetas o secciones\r --color-text\tTexto principal\r --color-muted\tTexto atenuado o secundario\r --color-border\tBordes y líneas suaves\r --color-success\tIndicadores positivos\r --color-error\tIndicadores de error\r --color-warning\tAdvertencias\r --color-info\tMensajes informativos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

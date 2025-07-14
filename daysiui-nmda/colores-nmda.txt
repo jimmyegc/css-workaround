@@ -1,0 +1,18 @@
+   <style>
+      html[data-theme='nmda'] {
+        --p: #ec5c2c;
+        --pf: #ffffff;
+        --s: #29285a;
+        --sf: #ffffff;
+        --a: #f18c6b;
+        --af: #ffffff;
+        --n: #f9f9f9;
+        --nf: #29285a;
+        --b1: #ffffff;
+        --bc: #e5e7eb;
+        --in: #3abff8;
+        --su: #36d399;
+        --wa: #fbbd23;
+        --er: #f87272;
+      }
+    </style>

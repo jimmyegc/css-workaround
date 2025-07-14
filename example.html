@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi SaaS</title>
+  <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Panel de Administración</h1>
+  </header>
+
+  <!-- Sidebar + Main layout -->
+  <div class="layout">
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Usuarios</a></li>
+          <li><a href="#">Ajustes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <!-- Cards -->
+      <div class="card">
+        <h2>Bienvenido</h2>
+        <p>Este panel está diseñado con un sistema de diseño escalable en SASS.</p>
+      </div>
+
+      <!-- Botones -->
+      <div style="margin-top: 1rem;">
+        <button class="button button--primary">Primario</button>
+        <button class="button button--secondary">Secundario</button>
+        <button class="button button--danger">Eliminar</button>
+        <button class="button button--disabled">Deshabilitado</button>
+      </div>
+
+      <!-- Formularios -->
+      <form style="margin-top: 2rem;">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+
+        <label for="email">Correo</label>
+        <input type="email" id="email" name="email" class="error" placeholder="correo@ejemplo.com">
+        <small class="muted">Este campo es obligatorio</small>
+      </form>
+
+      <!-- Tabla -->
+      <div class="card" style="margin-top: 2rem;">
+        <h3>Usuarios</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Rol</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Juan Pérez</td>
+              <td>juan@example.com</td>
+              <td>Admin</td>
+            </tr>
+            <tr>
+              <td>Ana López</td>
+              <td>ana@example.com</td>
+              <td>Editor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Alertas -->
+      <div style="margin-top: 2rem;">
+        <div class="alert success">Todo salió bien</div>
+        <div class="alert error">Hubo un error</div>
+        <div class="alert warning">Advertencia</div>
+        <div class="alert info">Información importante</div>
+      </div>
+
+      <div class="card">
+        <h3>Título de la tarjeta</h3>
+        <p>Contenido de la tarjeta, útil para mostrar estadísticas, vistas o bloques de información.</p>
+      </div>
+
+<!--       <div class="modal-overlay">
+        <div class="modal">
+          <h2>Confirmar acción</h2>
+          <p>¿Estás seguro que deseas continuar?</p>
+          <button class="button button--danger">Sí, continuar</button>
+          <button class="button button--secondary">Cancelar</button>
+        </div>
+      </div> -->
+
+      <div class="alert success">Operación realizada con éxito.</div>
+      <div class="alert error">Ha ocurrido un error inesperado.</div>
+      <div class="alert warning">Revisa los campos antes de enviar.</div>
+      <div class="alert info">Este es un mensaje informativo.</div>
+
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Rol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Laura Martínez</td>
+            <td>laura@example.com</td>
+            <td>Admin</td>
+          </tr>
+          <tr>
+            <td>Carlos Rivera</td>
+            <td>carlos@example.com</td>
+            <td>Usuario</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <span class="tag success">Activo</span>
+      <span class="tag error">Rechazado</span>
+      <span class="tag warning">Pendiente</span>
+      <span class="tag info">Nuevo</span>
+
+
+
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Mi SaaS</p>
+  </footer>
+
+</body>
+</html>

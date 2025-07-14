@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tabla Brutalista UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #000;
+      --white: #fff;
+      --danger: #ff3b3b;
+      --success: #00cc66;
+      --warning: #ffcc00;
+      --gray-light: #f9f9f9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Mono', monospace;
+      padding: 2rem;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 2px solid var(--black);
+      max-width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+
+    thead tr {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      border: 2px solid var(--black);
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    tbody tr:nth-child(even) {
+      background: var(--gray-light);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border: 2px solid var(--black);
+      font-size: 0.85rem;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+
+    .tag.success {
+      background: var(--success);
+      color: var(--white);
+      border-color: var(--success);
+    }
+
+    .tag.warning {
+      background: var(--warning);
+      color: var(--black);
+      border-color: var(--warning);
+    }
+
+    .tag.danger {
+      background: var(--danger);
+      color: var(--white);
+      border-color: var(--danger);
+    }
+
+    .btn {
+      border: 2px solid var(--black);
+      background: none;
+      padding: 0.25rem 0.75rem;
+      font-family: inherit;
+      cursor: pointer;
+      margin-right: 0.5rem;
+      font-size: 0.85rem;
+      transition: background 0.15s ease;
+    }
+
+    .btn:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .btn.edit {
+      border-color: #007bff;
+      color: #007bff;
+    }
+
+    .btn.edit:hover {
+      background: #007bff;
+      color: var(--white);
+    }
+
+    .btn.delete {
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+
+    .btn.delete:hover {
+      background: var(--danger);
+      color: var(--white);
+    }
+
+    @media (max-width: 600px) {
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Tabla Brutalista UI</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Estado</th>
+        <th>Fecha de creación</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Proyecto Alpha</td>
+        <td><span class="tag success">Activo</span></td>
+        <td>2025-07-01</td>
+        <td>
+          <button class="btn edit">Editar</button>
+          <button class="btn delete">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Beta Test</td>
+        <td><span class="tag warning">Pendiente</span></td>
+        <td>2025-06-15</td>
+        <td>
+          <button class="btn edit">Editar</button>
+          <button class="btn delete">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Release Candidate</td>
+        <td><span class="tag danger">Retrasado</span></td>
+        <td>2025-05-30</td>
+        <td>
+          <button class="btn edit">Editar</button>
+          <button class="btn delete">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

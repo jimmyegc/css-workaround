@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diseño Brutalista 2025</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Componentes</a></li>
+      </ul>
+    </aside>
+    <main class="main">
+      <h1>Diseño Brutalista Moderno</h1>
+
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Diseño Brutalista <br />para Webs 2025</h1>
+          <p>Sin sombras, sin filtros. Solo diseño honesto, funcional y con carácter. Ideal para desarrolladores y diseñadores radicales.</p>
+          <div class="hero-cta">
+            <button>Explorar UI</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://placehold.co/300x300/000000/ffffff?text=Hero+Image" alt="Brutalist Graphic" />
+        </div>
+      </section>
+
+
+      <section>
+        <h2>Botón</h2>
+        <button>Click Brutal</button>
+      </section>
+
+      <section>
+        <h2>Card</h2>
+        <div class="card">
+          <p>Esto es una card brutalista con bordes fuertes y diseño plano.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Formulario</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" rows="4"></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Tabla</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Rol</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jimmy</td>
+              <td>Dev</td>
+            </tr>
+            <tr>
+              <td>Sara</td>
+              <td>UX</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Modal</h2>
+        <button onclick="document.getElementById('modal').style.display='flex'">Abrir Modal</button>
+
+        <div id="modal" class="modal" style="display: none;">
+          <div class="modal-content">
+            <h3>Esto es un modal</h3>
+            <p>Diseño brutalista, centrado y sin sombras.</p>
+            <button onclick="document.getElementById('modal').style.display='none'">Cerrar</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
