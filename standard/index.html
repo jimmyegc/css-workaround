@@ -4,82 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Componentes con padding estándar</title>
-  <style>
-    :root {
-      --primary-color: #ec5c2c;
-      --secondary-color: #29285a;
-      --gray-light: #f9f9f9;
-      --radius: 0.5rem;
-      --font-stack: 'Segoe UI', sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      outline: 0.5px dashed green;
-    }
-
-    body {
-      margin: 0;
-      font-family: var(--font-stack);
-      background-color: var(--gray-light);
-      color: #333;      
-    }
-
-    /* Navbar */
-    .navbar {
-      background-color: var(--secondary-color);
-      color: white;
-      padding: 1rem 2rem; /* 16px 32px */
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem; /* 0px 16px */
-    }
-
-    /* Card */
-    .card {
-      background-color: white;
-      border-radius: var(--radius);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      padding: 1rem 1.5rem; /* 16px */
-      margin-bottom: 1.5rem;
-    }
-
-    .card h2 {
-      margin-top: 0;
-    }
-
-    /* Botón */
-    .btn {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: var(--radius);
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .btn-small {
-      padding: 0.25rem 0.75rem; /* (4px 12px) */
-    }
-
-    .btn-large {
-      padding: 0.75rem 1.5rem; /* (12px 24px) */
-    }
-
-    .btn:hover {
-      background-color: #cf4d20;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -104,9 +29,15 @@
     </section>
 
     <section class="card">
-      <button class="btn btn-small">Default</button>
+      <img src="https://www.hilton.com/im/en/NoHotel/19361896/shutterstock-667925704.jpg?impolicy=crop&cw=3800&ch=2533&gravity=NorthWest&xposition=0&yposition=1&rw=1280&rh=856" />
+      <h2>Tokyo</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </section>
+
+    <section class="card">
+      <button class="btn btn-small">Small</button>
       <button class="btn">Default</button>
-      <button class="btn btn-large">Default</button>
+      <button class="btn btn-large">Large</button>
     </section>
   </main>
 

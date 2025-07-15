@@ -1,0 +1,81 @@
+  :root {
+    --primary-color: #ec5c2c;
+    --secondary-color: #29285a;
+    --gray-light: #f9f9f9;
+    --radius: 0.5rem;
+    --font-stack: 'Segoe UI', sans-serif;
+    /* --bg-autocad: #2a313dff; */
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0.5px dashed var(--bg-autocad);
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-stack);
+    background-color: var(--gray-light);
+    color: #333;      
+  }
+
+  /* Navbar */
+  .navbar {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem; /* 16px 32px */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem; /* 0px 16px */      
+  }
+
+  /* Card */
+  .card {
+    background-color: white;    
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.5rem; /* 16px */
+    margin-bottom: 1.5rem;
+  }
+
+  .card img {
+    max-width: 420px;
+    border-radius: var(--radius);
+  }
+
+  .card h2 {
+    margin-top: 0;
+  }
+
+  /* Botón */
+  .btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .btn-small {
+    padding: 0.25rem 0.75rem; /* (4px 12px) */
+  }
+
+  .btn-large {
+    padding: 0.75rem 1.5rem; /* (12px 24px) */
+  }
+
+  .btn:hover {
+    background-color: #cf4d20;
+  }
